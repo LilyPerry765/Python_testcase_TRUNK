@@ -1,0 +1,945 @@
+# RSPSRV English Locales
+# Copyright (C) 2020 Respina networks and beyounds
+# This file is distributed under the same license as the rspsrv package.
+# Mehrdad Esmaeilpour <m.esmailpour@respina.net>, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 07:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:66
+msgid "Add branch"
+msgstr ""
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:91
+msgid "Branch"
+msgstr ""
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:117
+msgid "Update branch"
+msgstr ""
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:142
+msgid "Remove branch"
+msgstr ""
+
+#: rspsrv/apps/branch/versions/v1_0/services/branch.py:51
+#: rspsrv/apps/branch/versions/v1_0/services/branch.py:72
+#: rspsrv/apps/interconnection/versions/v1_0/services/operator.py:80
+#: rspsrv/apps/interconnection/versions/v1_0/services/operator.py:119
+#: rspsrv/apps/interconnection/versions/v1_0/services/profit.py:39
+#: rspsrv/apps/interconnection/versions/v1_0/services/profit.py:118
+msgid "JSON decode error"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:200
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:256
+msgid "id"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:201
+msgid "call id"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:202
+msgid "call date"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:203
+msgid "caller"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:204
+msgid "callee"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:205
+msgid "duration"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:206
+msgid "talk time"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:207
+msgid "call type"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:208
+msgid "call state"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:209
+msgid "direction"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:210
+msgid "end cause"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api.py:211
+msgid "state"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api_operators.py:31
+#: rspsrv/apps/cdr/api/api_operators.py:74
+msgid "Direction wrong"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api_operators.py:33
+#: rspsrv/apps/cdr/api/api_operators.py:76
+msgid "Operator wrong"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api_operators.py:39
+#: rspsrv/apps/cdr/api/api_operators.py:82
+msgid "Date range not selected"
+msgstr ""
+
+#: rspsrv/apps/cdr/api/api_operators.py:43
+#: rspsrv/apps/cdr/api/api_operators.py:86
+msgid "Date range wrong"
+msgstr ""
+
+#: rspsrv/apps/cdr/templates/admin/duration_input.html:11
+#, python-format
+msgid ""
+"By\n"
+"            %(filter_title)s"
+msgstr ""
+
+#: rspsrv/apps/cdr/templates/admin/duration_input.html:29
+msgid "Apply"
+msgstr ""
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:46
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:346
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:555
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:359
+msgid "JSON is Not Valid"
+msgstr ""
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:104
+msgid "No data returned"
+msgstr ""
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:111
+msgid "Received data from CGG in invalid"
+msgstr ""
+
+#: rspsrv/apps/crm/api/v3/api.py:36 rspsrv/apps/crm/api/v3/api.py:45
+#, python-brace-format
+msgid "Product with sub-id <{pid}> not found!"
+msgstr ""
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:38
+msgid "Must be a positive integer"
+msgstr ""
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:78
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:127
+msgid "Should be a number (Could start with or without a plus sign)"
+msgstr ""
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:136
+msgid "Main number is already exists"
+msgstr ""
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:145
+msgid "Subscription code is already exists"
+msgstr ""
+
+#: rspsrv/apps/crm/services/v3/product_service.py:182
+msgid "Can not create subscription in CGG"
+msgstr ""
+
+#: rspsrv/apps/crm/services/v3/product_service.py:234
+#: rspsrv/apps/payment/versions/v1_0/api/api.py:384
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:194
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:372
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:403
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:449
+#: rspsrv/apps/subscription/versions/v1/services/subscription.py:208
+#: rspsrv/apps/subscription/versions/v1/services/subscription.py:219
+msgid "Subscription does not exists"
+msgstr ""
+
+#: rspsrv/apps/crm/services/v3/trunk_service.py:68
+#, python-brace-format
+msgid "Number \"{num}\" is not valid!"
+msgstr ""
+
+#: rspsrv/apps/extension/alt_serializers.py:35
+#: rspsrv/apps/membership/versions/v1/services/user.py:48
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:84
+msgid "Password is weak"
+msgstr ""
+
+#: rspsrv/apps/file/versions/v1_0/api/__init__.py:61
+msgid "Details of file"
+msgstr ""
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:76
+msgid "not a valid request"
+msgstr ""
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:102
+msgid "uploading files failed, try again later"
+msgstr ""
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:113
+msgid ""
+"upload failed for one or more files. check your files extensions and size "
+"and try again"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:75
+msgid "Add operators"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:100
+msgid "Operator"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:126
+msgid "Update operator"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:151
+msgid "Remove operator"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:224
+msgid "Add profit"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:296
+msgid "Profit"
+msgstr ""
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:323
+msgid "Update profit"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:62
+msgid "JSON is invalid"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:72
+msgid "field is required"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:198
+msgid "Only customers can create new base balance invoices"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:328
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:727
+msgid "Something went wrong"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:421
+msgid "Only customers can create new credit invoices"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:484
+msgid "File uploaded"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:574
+msgid "Only customer and support has access to this resource"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:818
+msgid "Only customers can create new package invoice"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:892
+msgid "Only customers can update package invoices"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:11
+msgid "Ready to Pay"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:12
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:176
+#: rspsrv/apps/subscription/config.py:12
+msgid "Pending"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:13
+#: rspsrv/apps/subscription/config.py:13
+msgid "Paid"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:14
+msgid "Revoke"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:161
+msgid "Subscription code can not be emtpy"
+msgstr ""
+
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:323
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:769
+msgid "required fields"
+msgstr ""
+
+#: rspsrv/apps/membership/admin.py:83
+msgid "Personal info"
+msgstr ""
+
+#: rspsrv/apps/membership/admin.py:98
+msgid "Permissions"
+msgstr ""
+
+#: rspsrv/apps/membership/admin.py:105
+msgid "Important dates"
+msgstr ""
+
+#: rspsrv/apps/membership/models.py:45
+msgid "customer"
+msgstr ""
+
+#: rspsrv/apps/membership/models.py:46
+msgid "customers"
+msgstr ""
+
+#: rspsrv/apps/membership/models.py:139
+msgid "user"
+msgstr ""
+
+#: rspsrv/apps/membership/models.py:140
+msgid "users"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:169
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:179
+msgid "Customer does not exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:211
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:226
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:139
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:154
+msgid "Date time format is invalid"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:389
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:419
+msgid "Select a group for new user"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:399
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:412
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:426
+msgid "Select a valid group for new user"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:459
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:466
+#: rspsrv/apps/membership/versions/v1/services/user.py:231
+#: rspsrv/apps/membership/versions/v1/services/user.py:269
+#: rspsrv/apps/membership/versions/v1/services/user.py:330
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:463
+msgid "User does not exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:483
+msgid "You don't have permission to update other users"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:512
+msgid "You don't have permission to delete users"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:540
+msgid "Can not reset password for other users"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:602
+msgid "You don't have permission to empower users"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:655
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:218
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:226
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:228
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:823
+msgid "This field is required"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:716
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:744
+msgid "User does not exists!"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:12
+msgid "Female"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:13
+msgid "Male"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:16
+msgid "Individual"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:17
+msgid "Corporation"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:72
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:88
+msgid "Unable to log in with provided credentials."
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:78
+#: rspsrv/tools/nexfon_backend.py:37
+msgid "User account is disabled."
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:91
+#, python-brace-format
+msgid "Must include \"{username_field}\" and \"password\"."
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:38
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:268
+msgid "This email is already exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:47
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:238
+msgid "Invalid mobile number"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:60
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:248
+msgid "This mobile is already exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:198
+msgid "This username is already exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:212
+msgid "Duplicate username for this customer"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:258
+msgid "Invalid email"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:281
+msgid "Group does not exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:346
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:373
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:399
+msgid "New password does not match"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:351
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:378
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:404
+msgid "The new password is weak"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/mfa.py:71
+msgid "A generate token request is submitted recently, try again in a while"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:91
+#: rspsrv/apps/membership/versions/v1/services/user.py:129
+#: rspsrv/apps/membership/versions/v1/services/user.py:196
+msgid "Can not find user with this privilege level"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:152
+msgid "Can not find user with this identifier"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:159
+msgid "Can not update this user with your privilege level"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:209
+msgid "Another active user with theses credentials is already exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:244
+msgid "Old password is incorrect"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:302
+msgid "Token is expired"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:315
+msgid "Token does not exists"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:321
+msgid "This token is already used"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:372
+msgid "Mobile number does not exists for these credentials"
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:376
+msgid "Mobile number is not valid"
+msgstr ""
+
+#: rspsrv/apps/mis/versions/v1_0/services/mis.py:176
+msgid "Failed to send sms"
+msgstr ""
+
+#: rspsrv/apps/mis/versions/v1_0/services/mis.py:195
+msgid "Failed to send email"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:46
+msgid "Periodic invoices"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:73
+msgid "Auto pay interim invoice"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:100
+msgid "Interim invoice"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:127
+msgid "Max Usage"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:156
+msgid "Due date"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:213
+msgid "Prepaid expired"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:240
+msgid "Prepaid renewed"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:267
+msgid "Eighty percent prepaid usage"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:294
+msgid "Max usage"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:323
+msgid "Deallocation"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:345
+msgid "Runtime configs"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:373
+msgid "Set Runtime configs"
+msgstr ""
+
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:516
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:929
+msgid "required field"
+msgstr ""
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:59
+msgid "Only sales and support can update packages"
+msgstr ""
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:83
+msgid "Only sales and support can delete packages"
+msgstr ""
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:150
+msgid "Only sales and support can add packages"
+msgstr ""
+
+#: rspsrv/apps/payment/gateways/mis.py:109
+#: rspsrv/apps/payment/gateways/mis.py:150
+#, python-brace-format
+msgid "{code}: <{msg}>"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/api/api.py:358
+msgid "Only customers can pay for invoices"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:145
+msgid "Before Submit"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:146
+msgid "After Submit"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:147
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:177
+msgid "Success"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:148
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:178
+msgid "Failed"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:64
+msgid "Invalid payment gateway for credit invoice"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:76
+msgid "offline payments must have attachments"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:86
+msgid "one or more files does not exists"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/services/payment.py:86
+#: rspsrv/apps/payment/versions/v1_0/services/payment.py:180
+msgid "can not create url"
+msgstr ""
+
+#: rspsrv/apps/siam/models.py:7
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:5
+msgid "siam.suspend"
+msgstr ""
+
+#: rspsrv/apps/siam/models.py:8
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:6
+msgid "siam.release"
+msgstr ""
+
+#: rspsrv/apps/siam/models.py:12
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:10
+msgid "siam.suspend_type.bidirectional"
+msgstr ""
+
+#: rspsrv/apps/siam/models.py:16
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:14
+msgid "siam.suspend_order.release"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:44
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:50
+msgid "Subscription <{}> not found!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:74
+msgid "Given JSON is not valid!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:90
+msgid "siam.msg.success.suspend"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:92
+msgid "siam.msg.success.release"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:149
+msgid "siam.msg.success.forward"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/helpers/date_time_helper.py:29
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:37
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:52
+msgid "DateTime string format is incorrect!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/cdr_service.py:63
+msgid "Call flow value is not valid!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/cdr_service.py:81
+msgid "Number not found!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:66
+msgid "Subscription with this number does not exists"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:91
+msgid "siam.msg.no.this.number.not.forwarded"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:108
+msgid "siam.msg.no.number.forwarded.to.this.number"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:144
+msgid "siam.msg.invalid.number"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:153
+msgid "siam.msg.forwarding.this.number.impossible"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:167
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:190
+msgid "siam.msg.already.forwarded"
+msgstr ""
+
+#: rspsrv/apps/subscription/config.py:14
+msgid "Reject"
+msgstr ""
+
+#: rspsrv/apps/subscription/models.py:35 rspsrv/tools/utility.py:543
+msgid "Postpaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/models.py:36 rspsrv/tools/utility.py:541
+msgid "Prepaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/models.py:37
+msgid "Unlimited"
+msgstr ""
+
+#: rspsrv/apps/subscription/models.py:221
+msgid "Concurrency can not be less than 1!"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:64
+msgid "Not a valid choice"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:71
+msgid "Use a phone number when choosing forward status"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:79
+msgid "Must be a valid number"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:259
+msgid "prime code"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:262
+msgid "subscription code"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:265
+msgid "subscription type"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:268
+msgid "main number"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:271
+msgid "credit"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:274
+msgid "max call concurrency"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:277
+msgid "activation"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:281
+msgid "allow inbound"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:285
+msgid "allow outbound"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:289
+msgid "international call"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:293
+msgid "auto pay"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:297
+msgid "base balance postpaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:300
+msgid "current balance postpaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:303
+msgid "used balance postpaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:306
+msgid "base balance prepaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:309
+msgid "current balance prepaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:312
+msgid "used balance prepaid"
+msgstr ""
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:315
+msgid "created at"
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:51
+msgid "Incorrect authentication credentials."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:60
+msgid "Authentication credentials were not provided."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:69
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:78
+msgid "The requested resource could not be found."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:87
+msgid "The request is timeout."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:96
+msgid "The request could not be completed."
+msgstr ""
+
+#: rspsrv/tools/api_exceptions.py:105
+msgid "The requested resource is no longer available."
+msgstr ""
+
+#: rspsrv/tools/exception_handler.py:39
+msgid "request limit exceeded"
+msgstr ""
+
+#: rspsrv/tools/exception_handler.py:40
+msgid "try again after {} seconds"
+msgstr ""
+
+#: rspsrv/tools/exception_handler.py:49
+msgid "Something went wrong in the request"
+msgstr ""
+
+#: rspsrv/tools/nexfon_backend.py:22
+msgid "Invalid payload."
+msgstr ""
+
+#: rspsrv/tools/nexfon_backend.py:33
+msgid "Invalid signature."
+msgstr ""
+
+#: rspsrv/tools/orm.py:7
+msgid "\"qs\" Argument Is not a QuerySet Object."
+msgstr ""
+
+#: rspsrv/tools/response.py:106
+msgid "This resource is no longer available, use the newest version"
+msgstr ""
+
+#: rspsrv/tools/response.py:116
+msgid ""
+"This resource is going to be removed and no longer valid, use the newest "
+"version"
+msgstr ""
+
+#: rspsrv/tools/utility.py:222
+msgid "Yes"
+msgstr ""
+
+#: rspsrv/tools/utility.py:223
+msgid "No"
+msgstr ""
+
+#: rspsrv/tools/utility.py:411
+msgid "No data for export"
+msgstr ""
+
+#: rspsrv/tools/utility.py:511
+msgid "JSON is not valid"
+msgstr ""
+
+#: rspsrv/tools/utility.py:545
+msgid "Base balance invoice"
+msgstr ""
+
+#: rspsrv/tools/utility.py:547
+msgid "Credit invoice"
+msgstr ""
+
+#: rspsrv/tools/utility.py:549
+msgid "Invoice"
+msgstr ""
+
+#: rspsrv/tools/utility.py:551
+msgid "Package invoice"
+msgstr ""
+
+#: rspsrv/tools/utility.py:553
+msgid "Decrease"
+msgstr ""
+
+#: rspsrv/tools/utility.py:555
+msgid "Increase"
+msgstr ""
+
+#: rspsrv/tools/utility.py:574
+msgid "Field does not exists"
+msgstr ""
+
+#: rspsrv/tools/validators.py:11
+msgid "The password must contain at least 1 digit, 0-9."
+msgstr ""
+
+#: rspsrv/tools/validators.py:17
+msgid "Your password must contain at least 1 digit, 0-9."
+msgstr ""
+
+#: rspsrv/tools/validators.py:25
+msgid "The password must contain at least 1 uppercase or lower letter, A-Z."
+msgstr ""
+
+#: rspsrv/tools/validators.py:31
+msgid "Your password must contain at least 1 uppercase or lower letter, A-Z."
+msgstr ""
+
+#: rspsrv/tools/validators.py:39
+msgid "The password must contain at least 1 special character: !#$%&@"
+msgstr ""
+
+#: rspsrv/tools/validators.py:46
+msgid "Your password must contain at least 1 special character: !#$%&@"
+msgstr ""
+
+#: rspsrv/urls.py:34
+msgid "Nexfon"
+msgstr ""
+
+#: rspsrv/urls.py:35 rspsrv/urls.py:36
+msgid "Nexfon Administration"
+msgstr ""

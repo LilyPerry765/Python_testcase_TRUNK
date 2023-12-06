@@ -1,0 +1,186 @@
+upstream django-antique {
+        server nexfonrspsrv_rspsrv_app_1_1:8000;
+}
+
+server {
+    listen 8181;
+#    server_name _;
+     server_name  _;
+
+    location /generalresources/api/activelogo {
+        proxy_pass http://django-antique;
+    #    include /home/yaser/dev/backend/rspsrv-wo-cgrates/uwsgi_params;
+    }
+    location ~ ^/ipphone/logo/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/general_resources/ip_phone_logo/$1;
+    }
+    location /endpoint/api/endpoint/directorysearch {
+        proxy_pass http://django-antique;
+    #    include /home/yaser/dev/backend/rspsrv-wo-cgrates/uwsgi_params;
+    }
+
+    # the port your site will be served on
+    # Max upload size
+    client_max_body_size 8192M;   # adjust to taste
+    location = /favicon.ico {
+        access_log off;
+        log_not_found off;
+    }
+    # Django static
+    location /collected_static {
+#         alias /var/www/uwsgi/rspsrv/collected_static;
+          alias /opt/rspsrv/collected_static;
+
+    }
+    location ~ ^/site_media/mail/(.+)/(.+)/(.+)$ {
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/call_mail/$1/$2/$3;      # rspsrv media files
+    }
+    # Django media
+    location /site_media {
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rspsrv/site_media;      # rspsrv media files
+    }
+    location ~ ^/storage/documents/(\d+)/(\d+)/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/cloud_storage/documents/$1/$2/$3;
+    }
+    location ~ ^/storage/fax_items/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/fax_items/$1;
+    }
+    location ~ ^/ipphone/logo/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/general_resources/ip_phone_logo/$1;
+    }
+    location ~ ^/temp_storage/file/(\d+)/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/temporary_file_storage/$1/$2;
+    }
+    location ~ ^/storage/received_fax_items/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/fax_items/received_items/$1;
+    }
+    location ~ ^/storage/sent_fax_items/pdf/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/fax_items/pdf_sent/$1;
+    }
+    location ~ ^/storage/sent_fax_items/tiff/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/fax_items/tiff_sent/$1;
+    }
+    location ~ ^/storage/extension/(.+)/call_mail/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/call_mail/$1/$2;
+    }
+    location ~ ^/storage/cdr/(.+)/recorded_audio/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/recorded_call/cdr/$1/$2;
+    }
+
+    # 'File' Application.
+    location ~ ^/storage/files/(.+)/(.+)/(.+)$ {
+        #internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/files/$1/$2/$3;
+    }
+
+    location ~ ^/storage/playback/(mp3file|wavfile)/(.+)/(.+)$ {
+        internal;
+        alias /home/yaser/dev/backend/rspsrv-wo-cgrates/rsp_storage/general_resources/playback/$2/$3;
+    }
+
+    # Staff static
+    location ~ ^/staff/static/(.+) {
+        alias /var/www/vue_staff/dist/static/$1;
+    }
+    location ~ ^/staff/(.+) {
+        return 301 http://$server_name/staff;
+    }
+    # Staff dashboard index
+    location /staff {
+        alias /var/www/vue_staff/dist;
+        #try_files $uri $uri/index.html $uri.html =404;
+    }
+    # Webrtc static
+    location /static {
+#        alias /var/www/webrtc/static;     # rspsrv static files
+#         alias /var/www/uwsgi/rspsrv/collected_static; 
+          alias /opt/rspsrv/collected_static; 
+   }
+    location /dashboard {
+        alias /var/www/webrtc;
+        #try_files $uri $uri/index.html $uri.html =404;
+    }
+   # Webrtc index
+   location / {
+       #return 301 http://$server_name/dashboard;
+        root         /usr/share/nginx/html;
+   }
+    # Send all non-media requests to the Django server.
+   location ~ ^(.*)/api/(.*)$|^/admin|^/payment {
+add_header 'Access-Control-Allow-Origin' '*';
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Methods' 'GET,PATCH, POST, OPTIONS, PUT, DELETE' always;
+            add_header 'Access-Control-Max-Age' 1728000 always;
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Content-Type' 'text/plain; charset=utf-8' always;
+            add_header 'Content-Length' 0 always;
+            return 204;
+        }
+        if ($request_method = 'POST') {
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST,PATCH, OPTIONS, PUT, DELETE' always;
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
+        }
+        if ($request_method = 'GET') {
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS,PATCH, PUT, DELETE' always;
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
+        }
+        if ($request_method = 'PUT') {
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT,PATCH, DELETE' always;
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
+        }
+        if ($request_method = 'DELETE') {
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, PATCH,DELETE' always;
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
+        }
+                if ($request_method = 'PATCH') {
+            add_header 'Access-Control-Allow-Origin' '*' always;
+            add_header 'Access-Control-Allow-Credentials' 'true';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, PATCH,DELETE' always;
+            add_header 'Access-Control-Allow-Headers' '*' always;
+            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
+        }
+       include /opt/rspsrv/uwsgi/uwsgi_params; 
+       uwsgi_pass  django-antique;
+
+       #proxy_pass http://django-antique;
+       #include /home/yaser/dev/backend/rspsrv-wo-cgrates/uwsgi_params;
+   }
+
+      location /basestatic {
+    #     alias /var/www/uwsgi/rspsrv/collected_static;
+          alias /opt/rspsrv/collected_static;
+
+    }
+
+
+    # Send all non-media web-requests to the Django server.
+    location ~ ^(.*)/web/(.*)$ {
+        proxy_pass http://django-antique;
+        #include /home/yaser/dev/backend/rspsrv-wo-cgrates/uwsgi_params;
+    }
+}
+

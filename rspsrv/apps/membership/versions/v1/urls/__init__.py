@@ -1,0 +1,77 @@
+from django.urls import re_path
+
+from rspsrv.apps.membership.versions.v1 import api
+
+urls = [
+    re_path(
+        r'^(?:v1/)?login(?:/)?$',
+        api.UserLoginAPIView.as_view(),
+        name='login'
+    ),
+    re_path(
+        r'^(?:v1/)?generate-token(?:/)?$',
+        api.UserGenerateTokenAPIView.as_view(),
+        name='generate_token'
+    ),
+    re_path(
+        r'^(?:v1/)?customers[/]?$',
+        api.CustomersAPIView.as_view(),
+        name='customers'
+    ),
+    re_path(
+        r'^(?:v1/)?customers/(?P<customer_id>\d+)[/]?$',
+        api.CustomerAPIView.as_view(),
+        name='customer'
+    ),
+    re_path(
+        r'^(?:v1/)?users[/]?$',
+        api.UsersAPIView.as_view(),
+        name='users'
+    ),
+    re_path(
+        r'^(?:v1/)?users/(?P<user_id>\d+)[/]?$',
+        api.UserAPIView.as_view(),
+        name='user'
+    ),
+    re_path(
+        r'^(?:v1/)?users/(?P<user_id>\d+)/set-password[/]?$',
+        api.UserSetPasswordAPIView.as_view(),
+        name='user_set_password'
+    ),
+    re_path(
+        r'^(?:v1/)?users/(?P<user_id>\d+)/renew-password[/]?$',
+        api.UserRenewPasswordAPIView.as_view(),
+        name='user_renew_password'
+    ),
+    re_path(
+        r'^(?:v1/)?users/(?P<user_id>\d+)/empower[/]?$',
+        api.UserEmpowerAPIView.as_view(),
+        name='user_empower'
+    ),
+    # Recover password APIs
+    re_path(
+        r'^(?:v1/)?users/recover-password(?:/)?$',
+        api.RecoverPasswordAPIView.as_view(),
+        name='recover_password'
+    ),
+    re_path(
+        r'^(?:v1/)?users/recover-confirm(?:/)?$',
+        api.RecoverPasswordConfirmAPIView.as_view(),
+        name='password_reset_confirm'
+    ),
+    re_path(
+        r'^(?:v1/)?users/recover-reset[/]$',
+        api.RecoverPasswordResetAPIView.as_view(),
+        name='password_reset_complete'
+    ),
+    re_path(
+        r'^(?:v1/)?users/impersonate[/]$',
+        api.ImpersonateAPIView.as_view(),
+        name='impersonate'
+    ),
+    re_path(
+        r'^(?:v1/)?users/impersonate/revoke[/]$',
+        api.RevokeImpersonateAPIView.as_view(),
+        name='revoke_impersonate'
+    ),
+]

@@ -1,0 +1,2 @@
+class PlaybackEvent(object):
+    pass

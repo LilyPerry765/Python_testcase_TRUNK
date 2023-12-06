@@ -1,0 +1,8 @@
+{% extends "admin/index.html" %}
+
+{% block form_top %}
+{% for item in original.items %}
+  {{ item }}
+{% endfor %}
+
+{% endblock %}

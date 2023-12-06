@@ -1,0 +1,26 @@
+CLIENT_ACCESS_LEVEL = [(1, 'Respina internal'), (2, 'On net calls'), (3, 'Global access')]
+
+SWITCHMANAGER_APP_NAME = 'switchmanager'
+
+CONTROL_TECHNOLOGY = "SIP"
+ENDPOINT_CONTEXT = ""
+
+OPERATOR_IDENTIFIER = "RespinaPJSC"
+SBC_PUBLIC_IP = '77.104.105.217'
+
+HI2_INTERVAL = 600
+HI2_SEND_TIMEOUT = 10
+
+
+class LIGate(object):
+    HOST = 'http://192.168.1.250'
+
+    class Requests(object):
+        check_for_spying = '/target/check/'
+        ftp_mediator = '/iri/exchange/'
+
+SWITCH_ARI = [
+    {'HOST': 'http://10.0.8.188:500',
+     'USER': 'asterisk',
+     'PASSWORD': 'asteriskpasswd'}
+]

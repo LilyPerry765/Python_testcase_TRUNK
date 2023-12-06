@@ -1,0 +1,183 @@
+HI2Operations
+{ itu-t (0) identified-organization (4) etsi (0) securityDomain (2) lawfulIntercept (2) hi2 (1) version4 (4)}
+
+DEFINITIONS IMPLICIT TAGS ::=
+
+BEGIN
+
+IRIsContent             ::= CHOICE
+{
+        iRIContent                      IRIContent,
+        iRISequence                     IRISequence
+}
+
+IRISequence             ::= SEQUENCE OF IRIContent
+
+IRIContent              ::= CHOICE
+{
+        iRI-Begin-record                [1] IRI-Parameters,
+        iRI-End-record                  [2] IRI-Parameters,
+        iRI-Continue-record             [3] IRI-Parameters,
+        iRI-Report-record               [4] IRI-Parameters,
+        ...
+}
+
+IRI-Parameters          ::= SEQUENCE
+{
+        iRIversion                                                      [23] ENUMERATED
+        {
+                version2(2),
+                ... ,
+                version3(3),
+                version4(4)
+        } OPTIONAL,
+        lawfulInterceptionIdentifier            [1] LawfulInterceptionIdentifier,
+        communicationIdentifier                         [2] CommunicationIdentifier,
+        timeStamp                                                       [3] TimeStamp,
+        intercepted-Call-Direct                         [4] ENUMERATED
+        {
+                not-Available(0),
+                originating-Target(1),
+                terminating-Target(2),
+        ...
+        } OPTIONAL,
+        intercepted-Call-State                          [5] Intercepted-Call-State OPTIONAL,
+        conversationDuration                            [7] OCTET STRING (SIZE (3)) OPTIONAL,
+        locationOfTheTarget                                     [8] Location OPTIONAL,
+        partyInformation                                        [9] SET SIZE (1..10) OF PartyInformation OPTIONAL,
+        nature-Of-The-intercepted-call          [12] ENUMERATED
+        {
+                gSM-ISDN-PSTN-circuit-call(0),
+                gSM-SMS-Message(1),
+                uUS4-Messages(2),
+                tETRA-circuit-call(3),
+                teTRA-Packet-Data(4),
+                gPRS-Packet-Data(5),
+                ...
+        } OPTIONAL,
+        release-Reason-Of-Intercepted-Call             [11] OCTET STRING (SIZE (1..64)) OPTIONAL,
+        g-notification             [40] OCTET STRING (SIZE (1..32)) OPTIONAL
+}
+
+-- PARAMETERS FORMATS
+
+CommunicationIdentifier         ::= SEQUENCE
+{
+        communication-Identity-Number   [0] OCTET STRING (SIZE (1..8)) OPTIONAL,
+        network-Identifier              [1] Network-Identifier,
+        ...
+}
+
+Network-Identifier              ::= SEQUENCE
+{
+        operator-Identifier             [0] OCTET STRING (SIZE (1..32)),
+        network-Element-Identifier      [1] Network-Element-Identifier OPTIONAL,
+        ...
+}
+
+Network-Element-Identifier      ::= CHOICE
+{
+        e164-Format                     [1] OCTET STRING (SIZE (1..25)),
+        x25-Format                      [2] OCTET STRING (SIZE (1..25)),
+        iP-Format                       [3] OCTET STRING (SIZE (1..25)),
+        dNS-Format                      [4] OCTET STRING (SIZE (1..25)),
+        ...,
+        iP-Address                      [5] IPAddress,
+        ...
+}
+
+IPAddress ::= SEQUENCE
+{
+        iP-type             [1] ENUMERATED
+        {
+                iPV4(0),
+                iPV6(1),
+                ...
+        },
+        iP-value            [2] IP-value,
+        iP-assignment       [3] ENUMERATED
+        {
+            static(1),
+            dynamic(2),
+            notKnown (3),
+            ...
+        } OPTIONAL,
+        ...
+}
+
+IP-value ::= CHOICE
+{
+        iPBinaryAddress [1] OCTET STRING (SIZE(4..16)),
+        iPTextAddress   [2] IA5String (SIZE(7..45)),
+        ...
+}
+
+TimeStamp                               ::= CHOICE
+{
+        localTime                       [0] LocalTimeStamp,
+        utcTime                         [1] UTCTime
+}
+
+LocalTimeStamp                          ::= SEQUENCE
+{
+        generalizedTime                                 [0] GeneralizedTime
+}
+
+PartyInformation                        ::= SEQUENCE
+{
+        party-Qualifier                                         [0] ENUMERATED
+        {
+                originating-Party(0),
+                terminating-Party(1),
+                forwarded-to-Party(2),
+                gPRS-Target(3),
+                ...
+        },
+        partyIdentity                                           [1] SEQUENCE
+        {
+                e164-Format             [7] OCTET STRING (SIZE (1..25)) OPTIONAL,
+                sip-uri                 [8] OCTET STRING OPTIONAL
+        },
+        supplementary-Services-Information      [3] Supplementary-Services OPTIONAL,
+        ...
+}
+
+Location        ::= SEQUENCE
+{
+        adslLocation            [100] ADSLLocation OPTIONAL,
+        ...
+}
+
+ADSLLocation        ::= SEQUENCE
+{
+    lineNumber  [1] OCTET STRING (SIZE (1..25)) OPTIONAL,
+    ipAddress   [2] IPAddress OPTIONAL,
+    macAddress  [3] OCTET STRING (SIZE (1..50)) OPTIONAL,
+    movement    [4] OCTET STRING (SIZE (1..25)),
+    ...
+}
+
+Intercepted-Call-State                  ::= ENUMERATED
+{
+        idle(1),
+        setUpInProcees(2),
+        connected (3),
+        ...
+}
+
+Supplementary-Services                  ::= SEQUENCE
+{
+    standard-Supplementary-Services         [1] Standard-Supplementary-Services OPTIONAL,
+    ...
+}
+
+Standard-Supplementary-Services         ::= SEQUENCE
+{
+    iSUP-SS-parameters                      [1] SET SIZE (1..256) OF OCTET STRING (SIZE (1..256)) OPTIONAL,
+    dSS1-SS-Invoke-components               [7] OCTET STRING (SIZE (1..256)) OPTIONAL,
+    ...
+}
+
+LawfulInterceptionIdentifier    ::= OCTET STRING (SIZE (1..25))
+
+END -- HI2Operations

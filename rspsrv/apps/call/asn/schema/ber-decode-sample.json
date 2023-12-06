@@ -1,0 +1,40 @@
+{
+  "iRIContent": {
+    "iRI-End-record": {
+      "iRIversion": "version4",
+      "lawfulInterceptionIdentifier": "34",
+      "communicationIdentifier": {
+        "communication-Identity-Number": "31",
+        "network-Identifier": {
+          "operator-Identifier": "52657370696E61",
+          "network-Element-Identifier": {
+            "e164-Format": "313030303130313131303131303131303131303130303131"
+          }
+        }
+      },
+      "timeStamp": {
+        "localTime": {
+          "generalizedTime": "20180617114544"
+        }
+      },
+      "intercepted-Call-Direct": "originating-Target",
+      "intercepted-Call-State": "setUpInProcees",
+      "conversationDuration": "000016",
+      "partyInformation": [
+        {
+          "party-Qualifier": "originating-Party",
+          "partyIdentity": {
+            "sip-uri": "7369703A2B39383231393130373434343440637573746F6D6572312E6E6578666F6E2E6972"
+          }
+        },
+        {
+          "party-Qualifier": "terminating-Party",
+          "partyIdentity": {
+            "sip-uri": "7369703A2B39383231393130373030303140637573746F6D6572312E6E6578666F6E2E6972"
+          }
+        }
+      ],
+      "nature-Of-The-intercepted-call": "gPRS-Packet-Data"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+# PyCharm Files
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+venv
+*.pyc
+
+# Static files and folders
+staticfiles
+static
+*/staticfiles
+*/static
+static/*
+staticfiles/*
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+dist/
+
+# Translations
+*.pot
+*.mo
+
+# Django stuff
+*.log
+*/logs/*.log*
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+reports/
+
+# rspsrv stuff
+!rspsrv/log/rspsrv/
+rspsrv/log/rspsrv/*
+
+!rspsrv/tmp/upload/
+rspsrv/tmp/upload/*
+!rspsrv/tmp/session/
+rspsrv/tmp/session/*
+
+rspsrv/settings/local_env.py
+local_env.py
+datetime
+django.contrib.auth
+dump.rdb
+Pipfile.lock
+local.env
+
+!.keep
+!.gitignore
+*~
+
+.directory
+
+# RSPSRV Storage.
+rsp_storage/**
+!rsp_storage/**/.gitkeep
+
+# Ignore Bill Storage Files.
+rspsrv/apps/bill/storage/**/*.*
+!rspsrv/apps/bill/storage/**/.gitkeep
+
+# Ignore Migration Files.
+rspsrv/**/migrations/*.py
+!rspsrv/**/migrations/__init__.py
+
+# Site Media.
+rspsrv/site_media/**
+==== BASE ====
+!rspsrv/site_media/**/.gitkeep
+
+# deploy files
+rspsrv.tar.gz

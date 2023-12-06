@@ -1,0 +1,965 @@
+# RSPSRV persian Locales
+# Copyright (C) 2020 Respina networks and beyounds
+# This file is distributed under the same license as the rspsrv package.
+# Mehrdad Esmaeilpour <m.esmailpour@respina.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 07:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:66
+msgid "Add branch"
+msgstr "اضافه کردن شعبه"
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:91
+msgid "Branch"
+msgstr "شعبه"
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:117
+msgid "Update branch"
+msgstr "بروزرسانی شعبه"
+
+#: rspsrv/apps/branch/versions/v1_0/api/__init__.py:142
+msgid "Remove branch"
+msgstr "حذف شعبه"
+
+#: rspsrv/apps/branch/versions/v1_0/services/branch.py:51
+#: rspsrv/apps/branch/versions/v1_0/services/branch.py:72
+#: rspsrv/apps/interconnection/versions/v1_0/services/operator.py:80
+#: rspsrv/apps/interconnection/versions/v1_0/services/operator.py:119
+#: rspsrv/apps/interconnection/versions/v1_0/services/profit.py:39
+#: rspsrv/apps/interconnection/versions/v1_0/services/profit.py:118
+msgid "JSON decode error"
+msgstr "خطایی در پردازش JSON رخ داده است"
+
+#: rspsrv/apps/cdr/api/api.py:200
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:256
+msgid "id"
+msgstr "شناسه"
+
+#: rspsrv/apps/cdr/api/api.py:201
+msgid "call id"
+msgstr "شناسه تماس"
+
+#: rspsrv/apps/cdr/api/api.py:202
+msgid "call date"
+msgstr "تاریخ تماس"
+
+#: rspsrv/apps/cdr/api/api.py:203
+msgid "caller"
+msgstr "تماس گیرنده"
+
+#: rspsrv/apps/cdr/api/api.py:204
+msgid "callee"
+msgstr "مخاطب تماس"
+
+#: rspsrv/apps/cdr/api/api.py:205
+msgid "duration"
+msgstr "مدت زمان"
+
+#: rspsrv/apps/cdr/api/api.py:206
+msgid "talk time"
+msgstr "زمان مکالمه"
+
+#: rspsrv/apps/cdr/api/api.py:207
+msgid "call type"
+msgstr "نوع تماس"
+
+#: rspsrv/apps/cdr/api/api.py:208
+msgid "call state"
+msgstr "وضعیت تماس"
+
+#: rspsrv/apps/cdr/api/api.py:209
+msgid "direction"
+msgstr "جهت"
+
+#: rspsrv/apps/cdr/api/api.py:210
+msgid "end cause"
+msgstr "دلیل اتمام"
+
+#: rspsrv/apps/cdr/api/api.py:211
+msgid "state"
+msgstr "وضعیت"
+
+#: rspsrv/apps/cdr/api/api_operators.py:31
+#: rspsrv/apps/cdr/api/api_operators.py:74
+#, fuzzy
+#| msgid "direction"
+msgid "Direction wrong"
+msgstr "وارده / صادره را انتخاب کنید"
+
+#: rspsrv/apps/cdr/api/api_operators.py:33
+#: rspsrv/apps/cdr/api/api_operators.py:76
+#, fuzzy
+#| msgid "Operator"
+msgid "Operator wrong"
+msgstr "یک اپراتور انتخاب کنید"
+
+#: rspsrv/apps/cdr/api/api_operators.py:39
+#: rspsrv/apps/cdr/api/api_operators.py:82
+msgid "Date range not selected"
+msgstr "بازه تاریخ انتخاب نشده است"
+
+#: rspsrv/apps/cdr/api/api_operators.py:43
+#: rspsrv/apps/cdr/api/api_operators.py:86
+msgid "Date range wrong"
+msgstr "بازه تاریخ نامعتبر است"
+
+#: rspsrv/apps/cdr/templates/admin/duration_input.html:11
+#, python-format
+msgid ""
+"By\n"
+"            %(filter_title)s"
+msgstr ""
+
+#: rspsrv/apps/cdr/templates/admin/duration_input.html:29
+msgid "Apply"
+msgstr "اعمال تغییرات"
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:46
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:346
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:555
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:359
+msgid "JSON is Not Valid"
+msgstr "JSON معتبر نیست"
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:104
+msgid "No data returned"
+msgstr "داده ای دریافت نشد"
+
+#: rspsrv/apps/cgg/versions/v1_0/services/cgg_service.py:111
+msgid "Received data from CGG in invalid"
+msgstr "داده های دریافتی از سرویس مدیریت مالی معتبر نیست"
+
+#: rspsrv/apps/crm/api/v3/api.py:36 rspsrv/apps/crm/api/v3/api.py:45
+#, python-brace-format
+msgid "Product with sub-id <{pid}> not found!"
+msgstr "اشتراک با شناسه اشتراک <{pid}> وجود ندارد"
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:38
+msgid "Must be a positive integer"
+msgstr "مقدار باید عدد صحیح مثبت باشد"
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:78
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:127
+msgid "Should be a number (Could start with or without a plus sign)"
+msgstr "مقدار باید عددی باشد (می تواند با علامت مثبت آغاز شود)"
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:136
+msgid "Main number is already exists"
+msgstr "شماره پیش از این استفاده شده است"
+
+#: rspsrv/apps/crm/serializers/v3/product_serializers.py:145
+msgid "Subscription code is already exists"
+msgstr "کد اشتراک پیش از این استفاده شده است"
+
+#: rspsrv/apps/crm/services/v3/product_service.py:182
+msgid "Can not create subscription in CGG"
+msgstr "امکان ساخت اشتراک در سرویس مالی وجود ندارد"
+
+#: rspsrv/apps/crm/services/v3/product_service.py:234
+#: rspsrv/apps/payment/versions/v1_0/api/api.py:384
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:194
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:372
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:403
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:449
+#: rspsrv/apps/subscription/versions/v1/services/subscription.py:208
+#: rspsrv/apps/subscription/versions/v1/services/subscription.py:219
+msgid "Subscription does not exists"
+msgstr "اشتراک وجود ندارد"
+
+#: rspsrv/apps/crm/services/v3/trunk_service.py:68
+#, python-brace-format
+msgid "Number \"{num}\" is not valid!"
+msgstr "شماره <{num}> نامعتبر است"
+
+#: rspsrv/apps/extension/alt_serializers.py:35
+#: rspsrv/apps/membership/versions/v1/services/user.py:48
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:84
+msgid "Password is weak"
+msgstr "رمز عبور ضعیف است"
+
+#: rspsrv/apps/file/versions/v1_0/api/__init__.py:61
+msgid "Details of file"
+msgstr "جرییات فایل"
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:76
+msgid "not a valid request"
+msgstr "درخواست معتبر نیست"
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:102
+msgid "uploading files failed, try again later"
+msgstr "بارگذاری فایل (ها) با خطا مواجه شد. لطفا مجددا تلاش کنید"
+
+#: rspsrv/apps/file/versions/v1_0/services/__init__.py:113
+msgid ""
+"upload failed for one or more files. check your files extensions and size "
+"and try again"
+msgstr ""
+"بارگذاری فایل (ها) با شکست مواجه شد. لطفا فرمت و حجم فایل (ها) را بررسی کرده "
+"و مجددا تلاش کنید"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:75
+msgid "Add operators"
+msgstr "اضافه کردن اپراتور"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:100
+msgid "Operator"
+msgstr "اپراتور"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:126
+msgid "Update operator"
+msgstr "بروزرسانی اپراتور"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:151
+msgid "Remove operator"
+msgstr "حذف اپراتور"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:224
+msgid "Add profit"
+msgstr "اضافه کردن سود"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:296
+msgid "Profit"
+msgstr "سود"
+
+#: rspsrv/apps/interconnection/versions/v1_0/api/__init__.py:323
+msgid "Update profit"
+msgstr "بروزرسانی سود"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:62
+msgid "JSON is invalid"
+msgstr "JSON معتبر نیست"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:72
+msgid "field is required"
+msgstr "این فیلد ضروری است"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:198
+msgid "Only customers can create new base balance invoices"
+msgstr "تنها مشتریان اجازه پرداخت صورت‌حساب ها را دارند"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:328
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:727
+msgid "Something went wrong"
+msgstr "خطایی در درخواست رخ داده است"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:421
+msgid "Only customers can create new credit invoices"
+msgstr "تنها مشتریان اجازه افزایش اعتبار کیف پول را دارند"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:484
+msgid "File uploaded"
+msgstr "فایل بارگذاری شد"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:574
+msgid "Only customer and support has access to this resource"
+msgstr "تنها پشتیبانی و مشتریان به این بخش دسترسی دارند"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:818
+msgid "Only customers can create new package invoice"
+msgstr "تنها مشتریان اجازه خرید بسته مکالمه را دارند"
+
+#: rspsrv/apps/invoice/versions/v1_0/api/api.py:892
+msgid "Only customers can update package invoices"
+msgstr "تنها مشتریان اجازه خرید بسته مکالمه را دارند"
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:11
+msgid "Ready to Pay"
+msgstr "آماده پرداخت"
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:12
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:176
+#: rspsrv/apps/subscription/config.py:12
+msgid "Pending"
+msgstr "در انتظار تایید"
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:13
+#: rspsrv/apps/subscription/config.py:13
+msgid "Paid"
+msgstr "پرداخت شده"
+
+#: rspsrv/apps/invoice/versions/v1_0/config/__init__.py:14
+msgid "Revoke"
+msgstr "منقضی شده"
+
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:161
+msgid "Subscription code can not be emtpy"
+msgstr "کد اشتراک نمی تواند خالی باشد"
+
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:323
+#: rspsrv/apps/invoice/versions/v1_0/services/invoice.py:769
+msgid "required fields"
+msgstr "فیلد ضروری است"
+
+#: rspsrv/apps/membership/admin.py:83
+msgid "Personal info"
+msgstr "اطلاعات شخصی"
+
+#: rspsrv/apps/membership/admin.py:98
+msgid "Permissions"
+msgstr "دسترسی ها"
+
+#: rspsrv/apps/membership/admin.py:105
+msgid "Important dates"
+msgstr "تاریخ های مهم"
+
+#: rspsrv/apps/membership/models.py:45
+msgid "customer"
+msgstr "مشتری"
+
+#: rspsrv/apps/membership/models.py:46
+msgid "customers"
+msgstr "مشتریان"
+
+#: rspsrv/apps/membership/models.py:139
+msgid "user"
+msgstr "کاربر"
+
+#: rspsrv/apps/membership/models.py:140
+msgid "users"
+msgstr "کاربران"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:169
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:179
+msgid "Customer does not exists"
+msgstr "مشتری وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:211
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:226
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:139
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:154
+msgid "Date time format is invalid"
+msgstr "فرمت تاریخ نامعتبر است"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:389
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:419
+msgid "Select a group for new user"
+msgstr "برای کاربر یک گروه کاربری انتخاب کنید"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:399
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:412
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:426
+msgid "Select a valid group for new user"
+msgstr "برای کاربر یک گروه کاربری مجاز انتخاب کنید"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:459
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:466
+#: rspsrv/apps/membership/versions/v1/services/user.py:231
+#: rspsrv/apps/membership/versions/v1/services/user.py:269
+#: rspsrv/apps/membership/versions/v1/services/user.py:330
+#: rspsrv/apps/subscription/versions/v1/api/__init__.py:463
+msgid "User does not exists"
+msgstr "کاربر مورد نظر وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:483
+msgid "You don't have permission to update other users"
+msgstr "شما دسترسی بروزرسانی کاربران دیگر را ندارید"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:512
+msgid "You don't have permission to delete users"
+msgstr "شما دسترسی حذف کاربران را ندارید"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:540
+msgid "Can not reset password for other users"
+msgstr "امکان بازیابی رمز عبور برای کاربران دیگر وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:602
+msgid "You don't have permission to empower users"
+msgstr "شما دسترسی لازم برای تغییر وضعیت کاربران را ندارید"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:655
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:218
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:226
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:228
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:823
+msgid "This field is required"
+msgstr "این فیلد ضروری است"
+
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:716
+#: rspsrv/apps/membership/versions/v1/api/__init__.py:744
+msgid "User does not exists!"
+msgstr "کاربر مورد نظر وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:12
+msgid "Female"
+msgstr "زن"
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:13
+msgid "Male"
+msgstr "مرد"
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:16
+msgid "Individual"
+msgstr "شخص حقیقی"
+
+#: rspsrv/apps/membership/versions/v1/configs/__init__.py:17
+msgid "Corporation"
+msgstr "شرکت"
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:72
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:88
+msgid "Unable to log in with provided credentials."
+msgstr "اطلاعات احراز هویت ارسال شده معتبر نیست"
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:78
+#: rspsrv/tools/nexfon_backend.py:37
+msgid "User account is disabled."
+msgstr "کاربر غیرفعال شده است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/custom_jwt.py:91
+#, python-brace-format
+msgid "Must include \"{username_field}\" and \"password\"."
+msgstr ""
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:38
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:268
+msgid "This email is already exists"
+msgstr "ایمیل پیش از این استفاده شده است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:47
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:238
+msgid "Invalid mobile number"
+msgstr "شماره همراه نامعتبر است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:60
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:248
+msgid "This mobile is already exists"
+msgstr "شماره همراه پیش از این استفاده شده است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:198
+msgid "This username is already exists"
+msgstr "نام کاربری پیش از این استفاده شده است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:212
+msgid "Duplicate username for this customer"
+msgstr "نام کاربری برای این مشتری تکراری است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:258
+msgid "Invalid email"
+msgstr "ایمیل نامعتبر است"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:281
+msgid "Group does not exists"
+msgstr "گروه کاربری وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:346
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:373
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:399
+msgid "New password does not match"
+msgstr "رمز عبور جدید وارد شده یکسان نیست"
+
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:351
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:378
+#: rspsrv/apps/membership/versions/v1/serializers/user.py:404
+msgid "The new password is weak"
+msgstr "رمز عبور جدید ضعیف است"
+
+#: rspsrv/apps/membership/versions/v1/services/mfa.py:71
+msgid "A generate token request is submitted recently, try again in a while"
+msgstr ""
+"درخواست ارسال رمز یکبار مصرف به تازگی ارسال شده است. لطفا دقایقی دیگر مجددا "
+"تلاش کنید"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:91
+#: rspsrv/apps/membership/versions/v1/services/user.py:129
+#: rspsrv/apps/membership/versions/v1/services/user.py:196
+msgid "Can not find user with this privilege level"
+msgstr "کاربری با این سطح دسترسی پیدا نشد"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:152
+msgid "Can not find user with this identifier"
+msgstr "کاربری با این شناسه پیدا نشد"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:159
+msgid "Can not update this user with your privilege level"
+msgstr "شما اجازه بروزرسانی این کاربر را ندارید"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:209
+msgid "Another active user with theses credentials is already exists"
+msgstr ""
+"کاربر فعال دیگری با مشخصات (نام کاربری یا ایمیل یا موبایل) مشابه وجود دارد"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:244
+msgid "Old password is incorrect"
+msgstr "رمز عبور پیشین نادرست است"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:302
+msgid "Token is expired"
+msgstr "توکن مورد نظر منقضی شده است"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:315
+msgid "Token does not exists"
+msgstr "توکن مورد نظر وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:321
+msgid "This token is already used"
+msgstr "این توکن پیش از این استفاده شده است"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:372
+msgid "Mobile number does not exists for these credentials"
+msgstr "برای اطلاعات ارسال شده، شماره همراهی وجود ندارد"
+
+#: rspsrv/apps/membership/versions/v1/services/user.py:376
+msgid "Mobile number is not valid"
+msgstr "شماره همراه مورد نظر معتبر نیست"
+
+#: rspsrv/apps/mis/versions/v1_0/services/mis.py:176
+msgid "Failed to send sms"
+msgstr "امکان ارسال پیامک وجود ندارد"
+
+#: rspsrv/apps/mis/versions/v1_0/services/mis.py:195
+msgid "Failed to send email"
+msgstr "امکان ارسال ایمیل وجود ندارد"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:46
+msgid "Periodic invoices"
+msgstr "صورت‌حساب مصرفی پایان دوره"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:73
+msgid "Auto pay interim invoice"
+msgstr "پرداخت خودکار صورت‌حساب مصرفی میان دوره"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:100
+msgid "Interim invoice"
+msgstr "صورت‌حساب مصرفی میان دوره"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:127
+msgid "Max Usage"
+msgstr "مصرف صد در صد"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:156
+msgid "Due date"
+msgstr "مهلت پرداخت"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:213
+msgid "Prepaid expired"
+msgstr "اشتراک اعتباری منقضی شد"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:240
+msgid "Prepaid renewed"
+msgstr "اشتراک اعتباری تمدید شد"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:267
+msgid "Eighty percent prepaid usage"
+msgstr "مصرف هشتاد درصد مشترک اعتباری"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:294
+msgid "Max usage"
+msgstr "مصرف صد در صدی"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:323
+msgid "Deallocation"
+msgstr "جمع آوری"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:345
+msgid "Runtime configs"
+msgstr "تنظیمات بلادرنگ"
+
+#: rspsrv/apps/ocs/versions/v1_0/api/__init__.py:373
+msgid "Set Runtime configs"
+msgstr "انجام تنظیمات بلادرنگ"
+
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:516
+#: rspsrv/apps/ocs/versions/v1_0/services/ocs.py:929
+msgid "required field"
+msgstr "فیلد ضروری است"
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:59
+msgid "Only sales and support can update packages"
+msgstr "تنها پشتیبانی و فروش اجازه بروزرسانی بسته مکالمه را دارند"
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:83
+msgid "Only sales and support can delete packages"
+msgstr "تنها پشتیبانی و فروش اجازه حذف بسته مکالمه را دارند"
+
+#: rspsrv/apps/package/versions/v1_0/api/__init__.py:150
+msgid "Only sales and support can add packages"
+msgstr "تنها پشتیبانی و فروش اجازه افزودن بسته مکالمه را دارند"
+
+#: rspsrv/apps/payment/gateways/mis.py:109
+#: rspsrv/apps/payment/gateways/mis.py:150
+#, python-brace-format
+msgid "{code}: <{msg}>"
+msgstr ""
+
+#: rspsrv/apps/payment/versions/v1_0/api/api.py:358
+msgid "Only customers can pay for invoices"
+msgstr "تنها مشتریان اجازه پرداخت صورت‌حساب ها را دارند"
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:145
+msgid "Before Submit"
+msgstr "پیش از ارسال"
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:146
+msgid "After Submit"
+msgstr "پس از ارسال"
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:147
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:177
+msgid "Success"
+msgstr "موفق"
+
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:148
+#: rspsrv/apps/payment/versions/v1_0/config/config.py:178
+msgid "Failed"
+msgstr "ناموفق"
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:64
+msgid "Invalid payment gateway for credit invoice"
+msgstr "درگاه انتخاب شده برای شارژ کیف پول نامعتبر است"
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:76
+msgid "offline payments must have attachments"
+msgstr "پرداخت آفلاین نیاز به فایل پیوست دارد"
+
+#: rspsrv/apps/payment/versions/v1_0/serializers/payment.py:86
+msgid "one or more files does not exists"
+msgstr "یک یا چند فایل وجود ندارند"
+
+#: rspsrv/apps/payment/versions/v1_0/services/payment.py:86
+#: rspsrv/apps/payment/versions/v1_0/services/payment.py:180
+msgid "can not create url"
+msgstr "امکان ساخت آدرس مقصد وجود ندارد"
+
+#: rspsrv/apps/siam/models.py:7
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:5
+msgid "siam.suspend"
+msgstr "مسدود کردن"
+
+#: rspsrv/apps/siam/models.py:8
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:6
+msgid "siam.release"
+msgstr "اتصال"
+
+#: rspsrv/apps/siam/models.py:12
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:10
+msgid "siam.suspend_type.bidirectional"
+msgstr "دو طرفه"
+
+#: rspsrv/apps/siam/models.py:16
+#: rspsrv/apps/siam/versions/v1/serializers/serializers.py:14
+msgid "siam.suspend_order.release"
+msgstr "اتصال"
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:44
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:50
+msgid "Subscription <{}> not found!"
+msgstr "سرشماره مورد نظر پیدا نشد"
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:74
+msgid "Given JSON is not valid!"
+msgstr "JSON معتبر نیست"
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:90
+msgid "siam.msg.success.suspend"
+msgstr "سرویس مورد نظر با موفقیت مسدود شد"
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:92
+msgid "siam.msg.success.release"
+msgstr "سرویس مورد نظر با موفقیت وصل شد"
+
+#: rspsrv/apps/siam/versions/v1/api/trunk_api.py:149
+msgid "siam.msg.success.forward"
+msgstr "سرویس مورد نظر با موفقیت منتقل شد"
+
+#: rspsrv/apps/siam/versions/v1/helpers/date_time_helper.py:29
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:37
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:52
+msgid "DateTime string format is incorrect!"
+msgstr "فرمت تاریخ نامعتبر است"
+
+#: rspsrv/apps/siam/versions/v1/services/cdr_service.py:63
+msgid "Call flow value is not valid!"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/cdr_service.py:81
+msgid "Number not found!"
+msgstr "سرشماره پیدا نشد"
+
+#: rspsrv/apps/siam/versions/v1/services/invoice_service.py:66
+msgid "Subscription with this number does not exists"
+msgstr "سرشماه مورد نظر پیدا نشد"
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:91
+msgid "siam.msg.no.this.number.not.forwarded"
+msgstr "سرویس مورد نظر با موفقیت منتقل شد"
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:108
+msgid "siam.msg.no.number.forwarded.to.this.number"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:144
+msgid "siam.msg.invalid.number"
+msgstr "شماره نامعتبر است"
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:153
+msgid "siam.msg.forwarding.this.number.impossible"
+msgstr ""
+
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:167
+#: rspsrv/apps/siam/versions/v1/services/trunk_service.py:190
+msgid "siam.msg.already.forwarded"
+msgstr ""
+
+#: rspsrv/apps/subscription/config.py:14
+msgid "Reject"
+msgstr "رد شده"
+
+#: rspsrv/apps/subscription/models.py:35 rspsrv/tools/utility.py:543
+msgid "Postpaid"
+msgstr "دائمی"
+
+#: rspsrv/apps/subscription/models.py:36 rspsrv/tools/utility.py:541
+msgid "Prepaid"
+msgstr "اعتباری"
+
+#: rspsrv/apps/subscription/models.py:37
+msgid "Unlimited"
+msgstr "نامحدود"
+
+#: rspsrv/apps/subscription/models.py:221
+msgid "Concurrency can not be less than 1!"
+msgstr "تعداد همزمانی نمی‌تواند کمتر از یک باشد"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:64
+msgid "Not a valid choice"
+msgstr "گزینه انتخابی معتبر نیست"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:71
+msgid "Use a phone number when choosing forward status"
+msgstr "برای ارسال تماس از یک شماره تلفن معتبر استفاده کنید"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:79
+msgid "Must be a valid number"
+msgstr "شماره تلفن نامعتبر است"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:259
+msgid "prime code"
+msgstr "کد پرایم"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:262
+msgid "subscription code"
+msgstr "کد اشتراک"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:265
+msgid "subscription type"
+msgstr "نوع اشتراک"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:268
+msgid "main number"
+msgstr "سرشماره"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:271
+msgid "credit"
+msgstr "اعتبار کیف پول"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:274
+msgid "max call concurrency"
+msgstr "تعداد همزمانی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:277
+msgid "activation"
+msgstr "فعال"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:281
+msgid "allow inbound"
+msgstr "تماس ورودی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:285
+msgid "allow outbound"
+msgstr "تماس خروجی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:289
+msgid "international call"
+msgstr "تماس بین المللی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:293
+msgid "auto pay"
+msgstr "پرداخت خودکار"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:297
+msgid "base balance postpaid"
+msgstr "سقف مصرف دائمی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:300
+msgid "current balance postpaid"
+msgstr "اعتبار فعلی دائمی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:303
+msgid "used balance postpaid"
+msgstr "میزان مصرف دائمی"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:306
+msgid "base balance prepaid"
+msgstr "سقف مصرف بسته مکالمه"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:309
+msgid "current balance prepaid"
+msgstr "اعتبار فعلی بسته مکالمه"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:312
+msgid "used balance prepaid"
+msgstr "میزان مصرف بسته مکالمه"
+
+#: rspsrv/apps/subscription/versions/v1/serializers/subscription.py:315
+msgid "created at"
+msgstr "تاریخ ایجاد"
+
+#: rspsrv/tools/api_exceptions.py:51
+msgid "Incorrect authentication credentials."
+msgstr "اطلاعات احراز هویت نادرست هستند"
+
+#: rspsrv/tools/api_exceptions.py:60
+msgid "Authentication credentials were not provided."
+msgstr "اطلاعات احراز هویت ارسال نشده اند"
+
+#: rspsrv/tools/api_exceptions.py:69
+msgid "You do not have permission to perform this action."
+msgstr "شما اجازه انجام این عملیات را ندارید"
+
+#: rspsrv/tools/api_exceptions.py:78
+msgid "The requested resource could not be found."
+msgstr "منبع مورد درخواست وجود ندارد"
+
+#: rspsrv/tools/api_exceptions.py:87
+msgid "The request is timeout."
+msgstr "زمان درخواست ارسال شده منقضی شده است"
+
+#: rspsrv/tools/api_exceptions.py:96
+msgid "The request could not be completed."
+msgstr "امکان تکمیل درخواست وجود ندارد"
+
+#: rspsrv/tools/api_exceptions.py:105
+msgid "The requested resource is no longer available."
+msgstr "درخواست مورد نظر دیگر موجود نیست"
+
+#: rspsrv/tools/exception_handler.py:39
+msgid "request limit exceeded"
+msgstr "تعداد درخواست های شما بیش از حد مجاز است"
+
+#: rspsrv/tools/exception_handler.py:40
+msgid "try again after {} seconds"
+msgstr "لطفا پس از {} ثانیه مجددا تلاش کنید"
+
+#: rspsrv/tools/exception_handler.py:49
+msgid "Something went wrong in the request"
+msgstr "خطایی در درخواست رخ داده است"
+
+#: rspsrv/tools/nexfon_backend.py:22
+msgid "Invalid payload."
+msgstr "ورودی معتبر نیست"
+
+#: rspsrv/tools/nexfon_backend.py:33
+msgid "Invalid signature."
+msgstr "امضا معتبر نیست"
+
+#: rspsrv/tools/orm.py:7
+msgid "\"qs\" Argument Is not a QuerySet Object."
+msgstr ""
+
+#: rspsrv/tools/response.py:106
+msgid "This resource is no longer available, use the newest version"
+msgstr "منبع مورد نظر حذف شده است، لطفا از آخرین نسخه استفاده کنید"
+
+#: rspsrv/tools/response.py:116
+msgid ""
+"This resource is going to be removed and no longer valid, use the newest "
+"version"
+msgstr ""
+"منبع مورد نظر در مرحله حذف بوده و از این پس معتبر نیست، لطفا از آخرین نسخه "
+"استفاده کنید"
+
+#: rspsrv/tools/utility.py:222
+msgid "Yes"
+msgstr "بله"
+
+#: rspsrv/tools/utility.py:223
+msgid "No"
+msgstr "خیر"
+
+#: rspsrv/tools/utility.py:411
+msgid "No data for export"
+msgstr "داده ای برای خروجی وجود ندارد"
+
+#: rspsrv/tools/utility.py:511
+msgid "JSON is not valid"
+msgstr "JSON معتبر نیست"
+
+#: rspsrv/tools/utility.py:545
+msgid "Base balance invoice"
+msgstr "صورت‌حساب سقف مصرف"
+
+#: rspsrv/tools/utility.py:547
+msgid "Credit invoice"
+msgstr "صورت‌حساب کیف پول"
+
+#: rspsrv/tools/utility.py:549
+msgid "Invoice"
+msgstr "صورت‌حساب مصرفی"
+
+#: rspsrv/tools/utility.py:551
+msgid "Package invoice"
+msgstr "صورت‌حساب بسته مکالمه"
+
+#: rspsrv/tools/utility.py:553
+msgid "Decrease"
+msgstr "کاهشی"
+
+#: rspsrv/tools/utility.py:555
+msgid "Increase"
+msgstr "افزایشی"
+
+#: rspsrv/tools/utility.py:574
+msgid "Field does not exists"
+msgstr "فیلد مورد نظر وجود ندارد"
+
+#: rspsrv/tools/validators.py:11
+msgid "The password must contain at least 1 digit, 0-9."
+msgstr "رمزعبور باید شامل حداقل یک عدد باشد."
+
+#: rspsrv/tools/validators.py:17
+msgid "Your password must contain at least 1 digit, 0-9."
+msgstr "رمزعبور شما باید حداقل شامل یک عدد باشد."
+
+#: rspsrv/tools/validators.py:25
+msgid "The password must contain at least 1 uppercase or lower letter, A-Z."
+msgstr "رمزعبور باید شامل حداقل یک حرف بزرگ یا کوچک باشد."
+
+#: rspsrv/tools/validators.py:31
+msgid "Your password must contain at least 1 uppercase or lower letter, A-Z."
+msgstr "رمزعبور شما باید شامل حداقل یک حرف بزرگ یا کوچک باشد."
+
+#: rspsrv/tools/validators.py:39
+msgid "The password must contain at least 1 special character: !#$%&@"
+msgstr "رمزعبور باید شامل حداقل یک کاراکتر (!#$%&@) باشد."
+
+#: rspsrv/tools/validators.py:46
+msgid "Your password must contain at least 1 special character: !#$%&@"
+msgstr "رمزعبور شما باید شامل حداقل یک کاراکتر (!#$%&@) باشد."
+
+#: rspsrv/urls.py:34
+msgid "Nexfon"
+msgstr "نکسفون"
+
+#: rspsrv/urls.py:35 rspsrv/urls.py:36
+msgid "Nexfon Administration"
+msgstr "مدیریت نکسفون"
+
+#~ msgid "Customers can not update packages"
+#~ msgstr "مشتریان اجازه بروزرسانی بسته ها را ندارند"
+
+#~ msgid "Only finance users can access this resource"
+#~ msgstr "تنها کاربران فروش به این بخش دسترسی دارند"
+
+#~ msgid "Users can not approve offline payments"
+#~ msgstr "مشتریان اجازه تایید پرداخت های آفلاین را ندارند"

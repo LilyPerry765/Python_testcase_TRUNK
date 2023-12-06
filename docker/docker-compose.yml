@@ -1,0 +1,210 @@
+version: '2'
+services:
+  rspsrv_nginx:
+    image: nginx:1.19-alpine
+    ports:
+      - "8181:80"
+    restart: unless-stopped
+    tty: true
+  #networks:
+  #    - rspsrv-network
+    volumes:
+      - ./configs/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /opt/rspsrv/docker/configs/uwsgi/uwsgi_params:/opt/rspsrv/docker/configs/uwsgi/uwsgi_params
+      - static-content:/usr/share/rspsrv/static
+      - log-nginx:/var/log/nginx
+ #rspsrv_ha:
+ #   image: haproxy:lts
+ #   depends_on:
+ #     - rspsrv_app_1
+ #     - rspsrv_app_2
+ #   restart: unless-stopped
+ #   tty: true
+ #   ports:
+ #     - "8080:8080"
+ #     - "8989:8989"
+ #   networks:
+ #     - rspsrv-network
+ #   volumes:
+ #     - ./configs/ha/haproxy.conf:/usr/local/etc/haproxy/haproxy.cfg:ro
+ #     - log-ha:/var/log/haproxy
+  rspsrv_redis:
+    image: redis:6-buster
+    entrypoint: redis-server --rdbcompression yes --dbfilename rspsrv.rdb --save 300 1 --timeout 0
+    volumes:
+      - data-redis:/data
+    #networks:
+    #  - rspsrv-network
+    network_mode: "host"
+    restart: always
+  rspsrv_app_1:
+    env_file:
+      - ./configs/env/app.env
+        #build:
+        #context: ..
+        #dockerfile: ./Dockerfile
+    image: nexfon-rspsrv
+    depends_on:
+      - rspsrv_redis
+    ports:
+      - "8000:8000"
+   #network_mode: "host"
+   #networks:
+   #  - rspsrv-network
+    volumes:
+      - ../rspsrv/:/nexfon-rspsrv/rspsrv/      
+      - ./configs/env/app.env:/nexfon-rspsrv/docker/configs/env/app.env
+      - ./commands/install.sh:/nexfon-rspsrv/docker/commands/install.sh
+      - migration-api:/nexfon-rspsrv/rspsrv/apps/api_request/migrations
+      - migration-branch:/nexfon-rspsrv/rspsrv/apps/branch/migrations
+      - migration-cdr:/nexfon-rspsrv/rspsrv/apps/cdr/migrations
+      - migration-cgg:/nexfon-rspsrv/rspsrv/apps/cgg/migrations
+      - migration-crm:/nexfon-rspsrv/rspsrv/apps/crm/migrations
+      - migration-data_migration:/nexfon-rspsrv/rspsrv/apps/data_migration/migrations
+      - migration-endpoint:/nexfon-rspsrv/rspsrv/apps/endpoint/migrations
+      - migration-extension:/nexfon-rspsrv/rspsrv/apps/extension/migrations
+      - migration-file:/nexfon-rspsrv/rspsrv/apps/file/migrations
+      - migration-interconnection:/nexfon-rspsrv/rspsrv/apps/interconnection/migrations
+      - migration-invoice:/nexfon-rspsrv/rspsrv/apps/invoice/migrations
+      - migration-membership:/nexfon-rspsrv/rspsrv/apps/membership/migrations
+      - migration-mis:/nexfon-rspsrv/rspsrv/apps/mis/migrations
+      - migration-ocs:/nexfon-rspsrv/rspsrv/apps/ocs/migrations
+      - migration-package:/nexfon-rspsrv/rspsrv/apps/package/migrations
+      - migration-payment:/nexfon-rspsrv/rspsrv/apps/payment/migrations
+      - migration-siam:/nexfon-rspsrv/rspsrv/apps/siam/migrations
+      - migration-subscription:/nexfon-rspsrv/rspsrv/apps/subscription/migrations
+      - data-locale:/nexfon-rspsrv/rspsrv/locale
+      - log-logger:/nexfon-rspsrv/rspsrv/logs
+      - log-uwsgi:/var/log/rspsrv
+      - static-content:/usr/share/rspsrv/static
+      - ${RSPSRV_NOTIFICATION_TEMPLATE_PATH_HOST}:/usr/share/templates:ro
+    environment:
+      RSPSRV_NOTIFICATION_TEMPLATE_PATH: /usr/share/templates
+      RSPSRV_CELERY_CACHE_REDIS_HOST: redis://172.22.132.130
+      RSPSRV_CELERY_CACHE_REDIS_PORT: 6379
+      RSPSRV_REDIS_CELERY_DATABASE: 11
+      RSPSRV_REDIS_CACHE_DATABASE: 12
+      RSPSRV_REDIS_CACHE_PREFIX: rspsrv
+      RSPSRV_STATIC_ROOT: /usr/share/rspsrv/static
+      RSPSRV_STATIC_URL: /static/
+      RSPSRV_STATIC_DIRS: staticdir
+    restart: unless-stopped
+ #rspsrv_app_2:
+ #   env_file:
+ #     - ./configs/env/app.env
+ #   image: nexfon-rspsrv
+ #   depends_on:
+ #     - rspsrv_redis
+ #   networks:
+ #     - rspsrv-network
+ #   volumes:
+ #     - migration-api:/nexfon-rspsrv/rspsrv/apps/api_request/migrations
+ #     - migration-branch:/nexfon-rspsrv/rspsrv/apps/branch/migrations
+ #     - migration-cdr:/nexfon-rspsrv/rspsrv/apps/cdr/migrations
+ #     - migration-cgg:/nexfon-rspsrv/rspsrv/apps/cgg/migrations
+ #     - migration-crm:/nexfon-rspsrv/rspsrv/apps/crm/migrations
+ #     - migration-data_migration:/nexfon-rspsrv/rspsrv/apps/data_migration/migrations
+ #     - migration-endpoint:/nexfon-rspsrv/rspsrv/apps/endpoint/migrations
+ #     - migration-extension:/nexfon-rspsrv/rspsrv/apps/extension/migrations
+ #     - migration-file:/nexfon-rspsrv/rspsrv/apps/file/migrations
+ #     - migration-interconnection:/nexfon-rspsrv/rspsrv/apps/interconnection/migrations
+ #     - migration-invoice:/nexfon-rspsrv/rspsrv/apps/invoice/migrations
+ #     - migration-membership:/nexfon-rspsrv/rspsrv/apps/membership/migrations
+ #     - migration-mis:/nexfon-rspsrv/rspsrv/apps/mis/migrations
+ #     - migration-ocs:/nexfon-rspsrv/rspsrv/apps/ocs/migrations
+ #     - migration-package:/nexfon-rspsrv/rspsrv/apps/package/migrations
+ #     - migration-payment:/nexfon-rspsrv/rspsrv/apps/payment/migrations
+ #     - migration-siam:/nexfon-rspsrv/rspsrv/apps/siam/migrations
+ #     - migration-subscription:/nexfon-rspsrv/rspsrv/apps/subscription/migrations
+ #     - data-locale:/nexfon-rspsrv/rspsrv/locale
+ #     - log-logger:/nexfon-rspsrv/rspsrv/logs
+ #     - log-uwsgi:/var/log/rspsrv
+ #     - static-content:/usr/share/rspsrv/static
+ #     - ${RSPSRV_NOTIFICATION_TEMPLATE_PATH_HOST}:/usr/share/templates:ro
+ #   environment:
+ #     RSPSRV_NOTIFICATION_TEMPLATE_PATH: /usr/share/templates
+ #     RSPSRV_CELERY_CACHE_REDIS_HOST: "redis://rspsrv_redis"
+ #    RSPSRV_CELERY_CACHE_REDIS_PORT: 6379
+ #    RSPSRV_REDIS_CELERY_DATABASE: 11
+ #    RSPSRV_REDIS_CACHE_DATABASE: 12
+ #    RSPSRV_REDIS_CACHE_PREFIX: rspsrv
+ #    RSPSRV_STATIC_ROOT: /usr/share/rspsrv/static
+ #    RSPSRV_STATIC_URL: /static/
+ #    RSPSRV_STATIC_DIRS: staticdir
+ #  restart: unless-stopped
+  rspsrv_celery_worker:
+    env_file:
+      - ./configs/env/app.env
+    image: nexfon-rspsrv-worker
+    #build:
+    #  context: ..
+    #  dockerfile: ./DockerfileCelery
+    depends_on:
+      - rspsrv_redis
+    #networks:
+    #  - rspsrv-network
+    volumes:
+      - migration-api:/nexfon-rspsrv/rspsrv/apps/api_request/migrations
+      - migration-branch:/nexfon-rspsrv/rspsrv/apps/branch/migrations
+      - migration-cdr:/nexfon-rspsrv/rspsrv/apps/cdr/migrations
+      - migration-cgg:/nexfon-rspsrv/rspsrv/apps/cgg/migrations
+      - migration-crm:/nexfon-rspsrv/rspsrv/apps/crm/migrations
+      - migration-data_migration:/nexfon-rspsrv/rspsrv/apps/data_migration/migrations
+      - migration-endpoint:/nexfon-rspsrv/rspsrv/apps/endpoint/migrations
+      - migration-extension:/nexfon-rspsrv/rspsrv/apps/extension/migrations
+      - migration-file:/nexfon-rspsrv/rspsrv/apps/file/migrations
+      - migration-interconnection:/nexfon-rspsrv/rspsrv/apps/interconnection/migrations
+      - migration-invoice:/nexfon-rspsrv/rspsrv/apps/invoice/migrations
+      - migration-membership:/nexfon-rspsrv/rspsrv/apps/membership/migrations
+      - migration-mis:/nexfon-rspsrv/rspsrv/apps/mis/migrations
+      - migration-ocs:/nexfon-rspsrv/rspsrv/apps/ocs/migrations
+      - migration-package:/nexfon-rspsrv/rspsrv/apps/package/migrations
+      - migration-payment:/nexfon-rspsrv/rspsrv/apps/payment/migrations
+      - migration-siam:/nexfon-rspsrv/rspsrv/apps/siam/migrations
+      - migration-subscription:/nexfon-rspsrv/rspsrv/apps/subscription/migrations
+      - data-locale:/nexfon-rspsrv/rspsrv/locale
+      - log-logger:/nexfon-rspsrv/rspsrv/logs
+      - log-uwsgi:/var/log/rspsrv
+      - static-content:/usr/share/rspsrv/static
+      - ${RSPSRV_NOTIFICATION_TEMPLATE_PATH_HOST}:/usr/share/templates:ro
+    environment:
+      RSPSRV_NOTIFICATION_TEMPLATE_PATH: /usr/share/templates
+      RSPSRV_CELERY_CACHE_REDIS_HOST: "redis://rspsrv_redis"
+      RSPSRV_CELERY_CACHE_REDIS_PORT: 6379
+      RSPSRV_REDIS_CELERY_DATABASE: 11
+      RSPSRV_REDIS_CACHE_DATABASE: 12
+      RSPSRV_REDIS_CACHE_PREFIX: rspsrv
+      RSPSRV_STATIC_ROOT: /usr/share/rspsrv/static
+      RSPSRV_STATIC_URL: /static/
+      RSPSRV_STATIC_DIRS: staticdir
+    restart: unless-stopped
+networks:
+  default:
+    external:
+      name: nexfonrspsrv_rspsrv-network
+volumes:
+  static-content:
+  log-nginx:
+  log-ha:
+  log-uwsgi:
+  log-logger:
+  data-redis:
+  data-locale:
+  migration-api:
+  migration-branch:
+  migration-cdr:
+  migration-cgg:
+  migration-crm:
+  migration-data_migration:
+  migration-endpoint:
+  migration-extension:
+  migration-file:
+  migration-interconnection:
+  migration-invoice:
+  migration-membership:
+  migration-mis:
+  migration-ocs:
+  migration-package:
+  migration-payment:
+  migration-siam:
+  migration-subscription:

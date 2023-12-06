@@ -1,0 +1,27 @@
+#
+# Copyright (c) 2013, Digium, Inc.
+#
+
+"""ARI client library
+"""
+
+from .client import Client
+from ..swaggerpy import http_client as swaggerpy_http_client
+import six.moves.urllib as urllib
+
+
+# Client = client.Client
+
+
+def connect(base_url, username, password):
+    """Helper method for easily connecting to ARI.
+
+    :param base_url: Base URL for Asterisk HTTP server (http://localhost:8088/)
+    :param username: ARI username
+    :param password: ARI password.
+    :return:
+    """
+    split = urllib.parse.urlsplit(base_url)
+    http_client = swaggerpy_http_client.SynchronousHttpClient()
+    http_client.set_basic_auth(split.hostname, username, password)
+    return Client(base_url, http_client)

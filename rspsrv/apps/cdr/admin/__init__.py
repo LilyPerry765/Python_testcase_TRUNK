@@ -1,0 +1,1 @@
+from rspsrv.apps.cdr.admin.cdrs import CDRAdmin
